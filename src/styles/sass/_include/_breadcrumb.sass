@@ -1,0 +1,31 @@
+.homepage
+	.breadcrumb-wrap
+		display: none
+
+.breadcrumb-wrap
+	.breadcrumb
+		border-top: 1px solid darken($white,10%)
+		margin: 0
+		padding: 10px 0 15px
+		+bor-rad(0)
+		background: none
+		li
+			display: inline-block
+			&:after
+				content: '\e876'
+				font-family: 'linearicons-free'
+				+fs(18rem)
+				line-height: 1
+				display: inline-block
+				vertical-align: middle
+			&:last-child
+				&:after
+					display: none
+			a
+				display: inline-block
+				vertical-align: middle
+				color: $main
+				+fs(15rem)
+				padding-top: 5px
+				img
+					height: 26px

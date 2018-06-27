@@ -1,0 +1,139 @@
+.support-page
+	padding: 40px 0
+	.faq-list
+		.faq
+			a
+				display: block
+				padding: 15px
+				padding-left: 30px
+				+pos(rel,null)
+				color: darken($white,60%)
+				border-bottom: 1px dashed darken($white,20%)
+				line-height: 1.5
+				&:before
+					content: '\f059'
+					+pos(abs, 15px null null 0)
+					color: darken($white,40%)
+				&:hover
+					color: $green
+					&:before
+						color: $green
+	.faq-title
+		+fs(18rem)
+		font-weight: bold
+		color: darken($white,60%)
+		margin: 20px 0
+		padding-left: 40px
+		+pos(rel,null)
+		line-height: 1.2
+		&:before
+			content: '\f059'
+			+fs(30rem)
+			color: $green
+			+pos(abs, 0 null null 0)
+.pages
+	margin: -10px auto 60px
+	ul.pagination
+		margin: 0
+		padding: 0
+		justify-content: center
+		width: 100%
+		li 
+			display: inline-block
+			+ li 
+				margin-left: 5px
+			a 
+				display: block
+				width: 40px
+				height: 40px
+				line-height: 40px
+				+fs(16rem)
+				text-align: center
+				background: darken($white,5%)
+				color: $main
+			&.active
+				a 
+					color: $green
+					font-weight: bold
+
+.send-message
+	margin: 40px 0
+	background: darken($white,2%)
+	+bor-rad(3px)
+	overflow: hidden
+	+media-breakpoint-down(md)
+		margin-top: 0
+	.module-title
+		+fs(16rem)
+		font-weight: bold
+		background: $green
+		color: $white
+		padding: 12px 20px
+	.wrap-form
+		padding: 15px
+		.form-group
+			margin-bottom: 10px
+			label
+				display: none
+			input, textarea
+				width: 100%
+				border: none
+				padding: 10px 15px
+				+fs(14rem)
+				color: $main
+				background: darken($white,7%)
+				+bor-rad(0px)
+				&::-webkit-input-placeholder
+					font-style: italic
+		input[type="submit"]
+			width: auto
+			display: inline-block
+			padding: 8px 20px
+			background: $yellow
+			color: $main
+			font-weight: bold
+			border: none
+			&:hover
+				background: $amber
+
+.sidebar-title
+	+fs(16rem)
+	font-weight: bold
+	background: $green
+	color: $white
+	padding: 12px 20px
+.faq-other
+	margin: 40px 0
+	+media-breakpoint-down(md)
+		margin-top: 0
+	.faq-list
+		.faq
+			display: block
+			padding: 15px 0
+			color: $main
+			border-bottom: 1px dashed darken($white,20%)
+			+fs(14rem)
+			&:hover
+				color: $green
+.sidebar-category
+	margin: 40px 0
+	background: darken($white,3%)
+	+bor-rad(5px)
+	overflow: hidden
+	ul
+		li
+			border-bottom: 1px dashed darken($white,10%)
+			&:last-child
+				border-bottom: none
+			a
+				display: block
+				padding: 10px 15px
+				color: darken($white,60%)
+			&:hover
+				a
+					background: lighten($green,50%)
+					color: $main
+			&.active
+				a
+					background: $green
+					color: $white

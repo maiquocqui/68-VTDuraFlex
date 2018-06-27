@@ -1,0 +1,65 @@
+.contact-map
+	iframe
+		+media-breakpoint-down(lg)
+			height: 400px
+		+media-breakpoint-down(md)
+			height: 300px
+.contact-page
+	padding: 40px 0
+	.contact-form
+		.module-title
+			margin-bottom: 15px
+		.form-group
+			margin-bottom: 15px
+			label
+				display: none
+			input, textarea
+				width: 100%
+				+fs(14rem)
+				padding: 10px 15px
+				+bor-rad(3px)
+				border: 1px solid darken($white,15%)
+				&:hover, &:active, &:focus
+					border-color: darken($white,30%)
+		.frm-btn
+			padding: 10px 15px
+			text-align: center
+			clear: both
+			width: 100%
+			input[type="submit"]
+				background: $green
+				color: $white
+				padding: 0px 30px
+				line-height: 40px
+				+fs(16rem)
+				font-weight: bold
+				display: inline-block
+				border: none
+				&:hover
+					background: lighten($green,10%)
+	.contact-info
+		padding: 30px
+		background: darken($white,4%)
+		.group
+			margin-bottom: 20px
+			&:last-child()
+				margin-bottom: 0
+		.title
+			font-weight: bold
+			+fs(18rem)
+			margin-bottom: 5px
+		ul 
+			+fs(14rem)
+			color: darken($white,40%)
+			line-height: 1.7
+			a 
+				color: darken($white,40%)
+				&:hover
+					color: $green
+		.btn-viewmap
+			line-height: 1.7
+			color: $green
+			&:before
+				content: '\f041'
+				font-family: 'fontawesome'
+				margin-right: 5px

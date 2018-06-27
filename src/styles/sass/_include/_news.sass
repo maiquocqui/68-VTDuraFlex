@@ -1,0 +1,157 @@
+.news-page
+	padding: 40px 0
+	+ .pages
+		margin-top: -40px
+		margin-bottom: 30px
+	.news-list
+		margin-bottom: 10px
+		.col-12
+			margin-bottom: 30px
+			+media-breakpoint-down(xs)
+				&:last-child
+					margin-bottom: 0
+				&:nth-child(odd)
+					.news-col
+						background: lighten($green,50%)
+		.news-col
+			height: 100%
+			border-bottom: 1px solid darken($white,10%)
+			+transition(all,0.5s)
+			&:hover
+				// box-shadow: 0 3px 20px color-rgba($black,0.1)
+			figure 
+				.news-img
+					display: block
+					img
+						width: 100%
+				figcaption
+					padding: 10px 0
+					+pos(rel,null)
+					padding-left: 70px
+					+media-breakpoint-down(sm)
+						padding: 10px 15px 10px 80px
+					time 
+						background: $green
+						color: $white
+						width: 60px
+						text-align: center
+						padding: 10px 0
+						+pos(abs, 10px null null 0)
+						+media-breakpoint-down(sm)
+							left: 10px
+						.date, .month
+							line-height: 1
+						.date 
+							+fs(28rem)
+							font-weight: bold
+							margin-bottom: 3px
+						.month
+							+fs(11rem)
+					.news-name
+						+fs(14rem)
+						font-weight: bold
+						line-height: 1.4
+						margin-bottom: 5px
+						a 
+							color: $main
+							&:hover
+								color: $green
+					.news-des
+						+fs(13rem)
+						color: darken($white,40%)
+					.link
+						+media-breakpoint-down(sm)
+							display: none
+			&.big
+				+media-breakpoint-down(xs)
+					background: lighten($green,50%)
+				+media-breakpoint-up(md)
+					height: unset
+					border: none
+					figure 
+						+flexbox
+						flex-wrap: wrap
+						.news-img 
+							width: 58%
+							+media-breakpoint-down(lg)
+								width: 100%
+						figcaption
+							width: calc(42%)
+							background: darken($white,3%)
+							padding: 30px
+							+media-breakpoint-down(lg)
+								width: 100%
+							+media-breakpoint-down(xs)	
+								padding: 15px
+							.news-name
+								+fs(24rem)
+								font-weight: bold
+								line-height: 1.2
+								a 
+									color: darken($white,60%)
+									&:hover
+										color: $green
+							time
+								+pos(static,unset)
+								margin: 0
+								padding: 0
+								background: none
+								color: darken($white,40%)
+								+fs(15rem)
+								display: block
+								margin-bottom: 15px
+								&:before
+									content: '\f073'
+									font-family: 'fontawesome'
+									margin-right: 5px
+							.news-des
+								+fs(15rem)
+								color: darken($white,60%)
+								margin-bottom: 15px
+							.link 
+								display: inline-block
+								padding: 7px 30px
+								border: 1px solid $green
+								color: $green
+								&:hover
+									background: $green
+									color: $white
+
+.news-info
+	margin: -10px 0 20px
+	time 
+		color: darken($white,40%)
+		&:before
+			content: '\f073'
+			margin-right: 5px
+
+.news-sidebar
+	margin: 40px 0
+	+media-breakpoint-down(md)
+		margin-top: 0
+	.post-list
+		.post
+			padding: 20px 0
+			border-bottom: 1px solid darken($white,10%)
+			figure 
+				+flexbox
+				.post-img
+					display: block
+					width: 100px
+				figcaption
+					width: calc(100% - 100px)
+					padding-left: 10px
+					time 
+						display: block
+						color: darken($white,40%)
+						+fs(13rem)
+						&:before
+							content: '\f073'
+							font-family: 'fontawesome'
+							margin-right: 5px
+					.post-name
+						line-height: 1.3
+						a 
+							color: $main
+							&:hover
+								color: $green

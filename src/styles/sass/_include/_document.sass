@@ -1,0 +1,63 @@
+.document-page
+	padding: 40px 0
+	.topnav
+		margin-bottom: 30px
+		ul 
+			text-align: center
+			+media-breakpoint-down(sm)
+			li 
+				display: inline-block
+				+media-breakpoint-down(sm)
+					display: block
+				+ li 
+					margin-left: 5px
+					+media-breakpoint-down(sm)
+						margin-left: 0
+				a
+					display: block
+					padding: 10px 20px
+					+bor-rad(5px)
+					background: darken($white,5%)
+					text-transform: uppercase
+					color: $main
+				&.active
+					a
+						color: $main
+						background: $yellow
+	.document-table
+		width: 100%
+		th, td 
+			+fs(15rem)
+			padding: 10px
+			text-align: center
+			&:first-child
+				padding-left: 30px
+				text-align: left
+				+media-breakpoint-down(sm)
+					width: calc(100% - 150px)
+					padding-left: 10px
+			&:nth-child(2)
+				+media-breakpoint-down(sm)
+					display: none
+		th 
+			background: $green
+			font-weight: normal
+			color: $white
+		td 
+		a 
+			color: $main
+			&:hover
+				color: $green
+				border-bottom: 1px solid $green
+		.download
+			color: $red
+			&:hover
+				color: $red
+				border-bottom: 1px solid $red
+			&:before
+				content: '\f019'
+				margin-right: 5px
+		tr 
+			&:nth-child(odd)
+				td 
+					background: darken($white,5%)

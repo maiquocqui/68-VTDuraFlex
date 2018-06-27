@@ -1,0 +1,118 @@
+.system-map
+	+pos(rel,null)
+	height: calc(100vh - 100px)
+	margin-bottom: 60px
+	overflow: hidden
+	+media-breakpoint-down(sm)
+		height: auto
+		margin-bottom: 20px
+	.findmap-wrap
+		+pos(rel,null)
+		z-index: 10
+		margin-top: 160px
+		background: darken($white,3%)
+		+media-breakpoint-down(lg)
+			margin-top: 40px
+		+media-breakpoint-down(sm)
+			// +transform(translateY(100%))
+			// +transition(all,0.5s)
+			// &:before
+			// 	content: '\f102'
+			// 	background: darken($white,3%)
+			// 	color: $green
+			// 	width: 60px
+			// 	height: 30px
+			// 	line-height: 30px
+			// 	+fs(18rem)
+			// 	text-align: center
+			// 	+transform(translateX(-50%))
+			// 	+pos(abs, -30px null null 50%)
+			// &:hover
+			// 	+transform(translateY(0))
+		.findmap
+			padding: 15px 20px
+			+media-breakpoint-down(sm)
+				padding: 10px 15px
+			.system-title
+				+fs(24rem)
+				color: $green
+				text-transform: uppercase
+				margin-bottom: 10px
+				padding: 5px 0
+				+media-breakpoint-down(lg)
+					+fs(18rem)
+				+media-breakpoint-down(sm)
+					margin-bottom: 5px
+			.filtermap
+				.label
+					+fs(14rem)
+					color: darken($white,60%)
+					margin-bottom: 10px
+				.field
+					select
+						width: 100%
+						+bor-rad(5px)
+						background: $white
+						border: 1px solid darken($white,10%)
+						+fs(14rem)
+						padding: 8px 15px
+						color: darken($white,60%)
+		.addresslist
+			background: $white
+			border-top: 1px solid darken($white,10%)
+			overflow: auto
+			max-height: calc(100vh - 100px - 160px - 143px)
+			+media-breakpoint-down(lg)
+				max-height: calc(100vh - 140px - 136px)
+			+media-breakpoint-down(sm)
+				max-height: 500px
+			&::-webkit-scrollbar-track
+				// -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+				background-color: darken($white,40%)
+			&::-webkit-scrollbar
+				width: 7px
+				background-color: darken($white,40%)
+			&::-webkit-scrollbar-thumb
+				background-color: darken($white,20%)
+				border: none
+			.address
+				padding: 15px 20px
+				background: darken($white,3%)
+				border-bottom: 1px solid darken($white,10%)
+				color: darken($white,60%)
+				line-height: 1.7
+				cursor: pointer
+				+transition(all,0.5s)
+				+media-breakpoint-down(sm)
+					padding: 10px 15px
+				&:hover
+					background: lighten($green,50%)
+				&.active 
+					background: $green
+					color: $white
+					a  
+						color: $white
+						&:hover
+							text-decoration: underline
+				.title
+					+fs(15rem)
+					font-weight: bold
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+				ul 
+					li
+						+fs(14rem)
+						+media-breakpoint-down(sm)
+							+fs(13rem)
+				a  
+					color: darken($white,60%)
+	#map
+		+pos(abs, 0 null 0 0)
+		right: 0
+		+media-breakpoint-down(sm)
+			+pos(static,unset)
+		iframe 
+			width: 100%
+			height: 100%
+			+media-breakpoint-down(sm)
+				height: 400px

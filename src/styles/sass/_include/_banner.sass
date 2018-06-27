@@ -1,0 +1,65 @@
+.bannerwrap
+	.banner
+		.banner-caption
+			font-family: 'open sans'
+			+media-breakpoint-down(xs)
+			.bigcaption
+				+fs(40rem)
+				font-weight: 700
+				color: $white
+				line-height: 1.5
+				+media-breakpoint-down(sm)
+					+fs(32rem)
+				+media-breakpoint-down(xs)
+					// +fs(24rem)
+			.descaption
+				+fs(30rem)
+				color: $white
+				margin-bottom: 20px
+				line-height: 1.5
+				font-weight: 300
+				font-weight: 400
+				+media-breakpoint-down(sm)
+					+fs(24rem)
+				+media-breakpoint-down(xs)
+					// +fs(18rem)
+			.link
+				display: inline-block
+				padding: 10px 20px
+				background: $green
+				color: $white
+				// +fs(15rem)
+				+transition(all,0.5s)
+				+media-breakpoint-down(xs)
+					+fs(18rem)
+					padding: 15px 20px
+				&:hover
+					background: darken($green,5%)
+				&:after
+					content: '\f054'
+					margin-left: 10px
+		.uranus
+			&.tparrows
+				&:before
+					+fs(24rem)
+					text-shadow: 0 1px 10px color-rgba($black,0.5)
+		.hermes 
+			.tp-bullet
+				width: 10px
+				height: 10px
+				background: darken($white,10%)
+				border: none
+				box-shadow: none
+				+media-breakpoint-down(xs)
+					width: 20px
+					height: 3px
+					+bor-rad(0)
+				&:after
+					background: darken($white,10%)
+					box-shadow: none
+					border: none
+				&.selected
+					background: $green
+					&:after
+						background: $green
+		

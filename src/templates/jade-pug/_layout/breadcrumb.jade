@@ -1,0 +1,17 @@
+section.breadcrumb-wrap.clearfix
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name')
+						img(src="img/logovt.png", alt="")
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name')
+						img(src="img/duralogo.png", alt="")
+				meta(itemprop='position', content='2')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Trần DURAdecor
+				meta(itemprop='position', content='3')

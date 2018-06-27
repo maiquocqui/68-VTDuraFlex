@@ -1,0 +1,467 @@
+.home-app
+	padding: 50px 0 20px
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+.app-list
+	.row
+		justify-content: center
+	.col-custom, .col-12
+		width: 20%
+		padding: 0px 15px
+		margin-bottom: 30px
+		+media-breakpoint-down(md)
+			width: 33.33%
+		+media-breakpoint-down(sm)
+			width: 50%
+		+media-breakpoint-down(xs)
+			width: 100%
+			&:last-child
+				margin-bottom: 0
+		+media-breakpoint-up(xl)
+			&:nth-child(1)
+				animation-delay: 0s
+			&:nth-child(2)
+				animation-delay: 0.2s
+			&:nth-child(3)
+				animation-delay: 0.4s
+			&:nth-child(4)
+				animation-delay: 0.6s
+			&:nth-child(5)
+				animation-delay: 0.8s
+	
+	.app-col
+		+pos(rel,null)
+		height: 100%
+		padding-bottom: 60px
+		+media-breakpoint-down(sm)
+			padding-bottom: 0
+		figure 
+			.app-img
+				+flexbox
+				justify-content: center
+				align-items: center
+				width: 120px
+				height: 120px
+				margin: 0 auto 20px
+				+media-breakpoint-down(sm)
+					margin-bottom: 10px
+					width: auto
+					height: auto
+			figcaption
+				text-align: center
+				.app-name
+					+fs(24rem)
+					margin-bottom: 20px
+					line-height: 1.5
+					+media-breakpoint-down(sm)
+						+fs(18rem)
+						margin-bottom: 5px
+						font-weight: 600
+					a 
+						color: $main
+				.app-des
+					+fs(15rem)
+					color: darken($white,60%)
+					+media-breakpoint-down(sm)
+						+fs(14rem)
+						padding: 0px 30px
+						margin-bottom: 10px
+				.link
+					display: block
+					white-space: nowrap
+					padding: 8px 20px
+					background: $green
+					+pos(abs, null null 0 50%)
+					+transform(translateX(-50%))
+					color: $white
+					+media-breakpoint-down(sm)
+						+pos(static,unset)
+						+transform(translateX(0))
+						display: inline-block
+						// width: 100px
+						padding: 8px 30px
+						text-align: center
+					&:before
+						background: color-rgba($white,0.2)
+					&:after
+						content: '\f054'
+						margin-left: 5px
+
+.home-title
+	+fs(36rem)
+	font-weight: bold
+	color: $main
+	margin-bottom: 30px
+	+media-breakpoint-down(sm)
+		+fs(28rem)
+		margin-bottom: 20px
+.home-des
+	+fs(16rem)
+	color: darken($white,50%)
+	width: 85%
+	margin: -10px auto 30px
+	+media-breakpoint-down(sm)
+		width: 100%
+		+fs(14rem)
+		margin-bottom: 20px
+.page-title
+	+fs(30rem)
+	font-weight: bold
+	color: $main
+	margin-bottom: 30px
+	+media-breakpoint-down(sm)
+		+fs(24rem)
+		margin-bottom: 15px
+	&:after
+		content: ''
+		display: block
+		width: 50px
+		height: 2px
+		background: $green
+		margin-top: 10px
+.small-title
+	+fs(24rem)
+	font-weight: bold
+	color: $main
+	margin-bottom: 30px
+	text-transform: uppercase
+	+media-breakpoint-down(sm)
+		+fs(16rem)
+
+.home-product
+	padding: 50px 0
+	background: darken($white,5%)
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.product-img
+		text-align: center
+	.product-des
+		color: darken($white,60%)
+.btn-viewmore 
+	display: inline-block
+	line-height: 40px
+	text-decoration: underline
+	padding-left: 50px
+	padding-right: 15px
+	+pos(rel,null)
+	color: darken($white,60%)
+	+transform(perspective(1px) translateZ(0))
+	&:before
+		content: ''
+		display: block
+		width: 40px
+		height: 40px
+		background: url(../img/home/add.png) center center no-repeat
+		+pos(abs, 0 null null 0)
+		z-index: 3
+	&:after
+		content: ''
+		display: block
+		background: $white
+		+bor-rad(50px)
+		+pos(abs, 0 calc(100% - 40px) 0 0)
+		z-index: -1
+		+transition(all,0.5s)
+	&:hover
+		color: $green
+		// text-decoration: underline
+		&:after
+			right: 0
+.s2
+	.btn-viewmore
+		&:after
+			background: darken($white,5%)
+	
+.home-feature
+	padding: 50px 0
+	background: $white
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.feature-nav
+		width: 70%
+		margin: 0 auto 30px
+		+media-breakpoint-down(lg)
+			width: 80%
+		+media-breakpoint-down(md)
+			width: 85%
+		+media-breakpoint-down(sm)
+			width: 90%
+			margin-bottom: 15px
+		.slick-track
+			padding-bottom: 10px
+		.slick-prev,.slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 5
+			opacity: 0.5
+			&:before
+				content: ''
+				+fs(24rem)
+		.slick-prev
+			left: -15px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -15px
+			&:before
+				content: '\f105'
+		.item
+			border-bottom: 1px solid darken($white,10%)
+			+media-breakpoint-up(xl)
+				&:nth-child(1)
+					animation-delay: 0s
+				&:nth-child(2)
+					animation-delay: 0.2s
+				&:nth-child(3)
+					animation-delay: 0.4s
+				&:nth-child(4)
+					animation-delay: 0.6s
+				&:nth-child(5)
+					animation-delay: 0.8s
+				&:nth-child(6)
+					animation-delay: 1s
+			.feature-item
+				+pos(rel,null)
+				border-bottom: 2px solid transparent
+				cursor: pointer
+				+transition(all,0.5s)
+				margin-bottom: -1px
+				&:after
+					content: ''
+					display: block
+					width: 0
+					height: 0
+					border: 5px solid 
+					border-color: $green transparent transparent transparent
+					+pos(abs, 100% null null 50%)
+					+transform(translateX(-50%))
+					opacity: 0
+					+transition(all,0.5s)
+				figure
+					.icon
+						+flexbox
+						width: 68px
+						height: 68px
+						justify-content: center
+						align-items: center
+						margin: 0 auto
+					figcaption
+						.title
+							padding: 10px 0
+							color: $main
+							text-align: center
+							+fs(14rem)
+			&.slick-current
+				.feature-item
+					border-color: $green
+					&:after
+						opacity: 1
+					figure 
+						figcaption
+							.title
+								color: $green
+	.feature-slide
+		.item
+		.feature-detail
+		.feature-content
+			.page-title
+				+fs(24rem)
+				font-weight: normal
+			.content
+				+fs(16rem)
+				color: darken($white,60%)
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+
+.home-project
+	// background: url(../img/woodbg.jpg) center center no-repeat
+	// background-size: cover
+	+pos(rel,null)
+	padding: 50px 0 0
+	// overflow: visible
+	// height: 630px
+	&.s2
+		.home-title
+			color: $main
+		.project-bg
+			top: 160px
+			bottom: 60px
+			&:before
+				display: none
+	.project-bg
+		+pos(abs, 0 null 70px 0)
+		right: 0
+		+flexbox
+		justify-content: center
+		align-items: center
+		overflow: hidden
+		img 
+			width: 100%
+			height: 100%
+			object-fit: cover
+		&:before
+			content: ''
+			+pos(abs, 0 null 0 0)
+			right: 0
+			background: $black
+			opacity: 0.25
+	.container
+		+pos(rel,null)
+		z-index: 5
+	.home-title
+		color: $white
+	.home-project-slide
+		margin: 0px -30px
+		.slick-track
+			// padding-bottom: 20px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			color: $white
+			z-index: 5
+			&:before
+				content: ''
+				font-family: 'fontawesome'
+				+fs(42rem)
+			&.slick-disabled
+				opacity: 0
+		.slick-prev
+			left: -0px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -0px
+			&:before
+				content: '\f105'
+		.item
+			padding: 0px 30px 20px
+			overflow: hidden
+			.project-item
+				figure 
+					+pos(rel,null)
+					&:after
+						content: ''
+						display: table
+						width: 100%
+						clear: both
+					.project-img
+						width: calc(100% - 135px)
+						float: right
+						box-shadow: 0 3px 15px color-rgba($black,0.2)
+						+transition(all,1s)
+						opacity: 0
+						+transform(translateX(50%))
+						+media-breakpoint-down(sm)
+							+pos(static,unset)
+							+transform(translateX(0))
+							width: 100%
+							float: none
+							clear: both
+						img
+							width: 100%
+					figcaption
+						width: 270px
+						text-align: center
+						background: $white
+						padding: 20px 30px
+						+pos(abs, 50% null null 0)
+						+transform(translateY(-50%))
+						box-shadow: 0 3px 25px color-rgba($black,0.2)
+						opacity: 0
+						+transition(all,1s)
+						+media-breakpoint-down(sm)
+							+pos(static,unset)
+							+transform(translateX(0))
+							width: 100%
+							float: none
+							clear: both
+						.project-name
+							+fs(20rem)
+							text-transform: uppercase
+							font-weight: bold
+							margin-bottom: 15px
+							&:after
+								content: ''
+								display: block
+								width: 60px
+								height: 1px
+								background: $main
+								margin: 15px auto 0
+							a
+								color: $green
+						.project-des
+							+fs(14rem)
+							color: $main
+			&.slick-current
+				.project-item
+					figure
+						.project-img
+							+transform(translateX(0))
+							opacity: 1
+						figcaption
+							// transition-delay: 1s
+							opacity: 1
+.home-news
+	padding: 30px 0px 80px
+	.news-list
+		background: darken($white,4%)
+		padding: 20px
+		+media-breakpoint-down(md)
+			margin-bottom: 20px
+		.news-col
+			margin-bottom: 20px
+			&:last-child
+				border: none
+			figure 
+				+flexbox
+				flex-wrap: wrap
+				.news-img
+					display: block
+					width: 100px
+				figcaption
+					width: calc(100% - 100px)
+					padding-left: 15px
+					.news-name
+						+fs(14rem)
+						line-height: 1.4
+						a 
+							color: $main
+							&:hover
+								color: $green
+			&.big
+				margin: 0
+				+media-breakpoint-down(sm)
+					margin-bottom: 30px
+				figure 
+					.news-img
+						width: 100%
+						+pos(rel,null)
+						time 
+							+pos(abs, null null 0 0)
+							z-index: 5
+							background: $green
+							color: $white
+							text-align: center
+							width: 60px
+							padding: 7px 0
+							.date
+								display: block
+								+fs(30rem)
+								font-weight: bold
+								line-height: 1
+							.month
+								display: block
+								+fs(12rem)
+					figcaption
+						padding: 10px 0 0
+						width: 100%
+						.news-name
+							+fs(15rem)
+							font-weight: bold
+							text-transform: uppercase
+							margin-bottom: 10px
+						.news-des
+							+fs(14rem)
+							color: darken($white,60%)

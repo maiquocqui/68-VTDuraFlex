@@ -1,0 +1,150 @@
+footer
+	.popup-hotline
+		background: $green
+		color: $yellow
+		+pos(fix, null 15px 15px null)
+		z-index: 50
+		width: 60px
+		height: 60px
+		line-height: 60px
+		text-align: center
+		padding: 5px
+		+bor-rad(50px)
+		+fs(28rem)
+		box-shadow: 0 10px 20px 0px color-rgba($black,0.3)
+		a
+			+flexbox
+			justify-content: center
+			align-items: center
+			align-content: center
+			width: 100%
+			height: 100%
+			color: $yellow
+			+bor-rad(50px)
+			border: 1px solid $white
+			line-height: 1
+	.footermenu
+		background: $main
+		ul.menulink
+			> li
+				border-bottom: 1px solid darken($white,75%)
+				> a
+					display: block
+					color: $white
+					padding: 10px 15px
+					opacity: 0.5
+				&.hassub
+					+pos(rel,null)
+					.btn-showsub
+						+pos(abs, 5px 00px null null)
+						width: 30px
+						height: 30px
+						line-height: 30px
+						text-align: center
+						color: $white
+						+transition(all,0.3s)
+						&.active
+							+transform(scale(1,-1))
+					> a
+					.sub
+						background: color-rgba($black,0.1)
+						display: none
+						> ul
+							> li
+								> a
+									display: block
+									color: $white
+									padding: 10px 15px
+									opacity: 0.5
+								&:hover
+									> a
+										opacity: 1
+				&:hover
+					> a
+						opacity: 1
+	.footertop
+		background: $footerbg
+		padding: 30px 0
+		.footernav
+			float: left
+			padding: 8px 0
+			+media-breakpoint-down(md)
+				float: none
+				text-align: center
+			+media-breakpoint-down(sm)
+				text-align: left
+			ul 
+				+media-breakpoint-down(sm)
+					+flexbox
+					flex-wrap: wrap
+				li 
+					display: inline-block
+					+fs(13rem)
+					text-transform: uppercase
+					+pos(rel,null)
+					+media-breakpoint-down(sm)
+						display: block
+						width: 50%
+						margin-bottom: 10px
+					+ li 
+						+media-breakpoint-up(md)
+							margin-left: 10px
+							&:before
+								content: ''
+								display: block
+								width: 1px
+								height: 10px
+								background: darken($white,60%)
+								+pos(abs,4px null null -7px)
+					a 
+						color: darken($white,60%)
+						&:hover
+							color: $green
+		.subscribe
+			float: right
+			+media-breakpoint-down(md)
+				float: none
+				+flexbox
+				justify-content: center
+			.subscribefrm
+				+flexbox
+				width: 300px
+				background: $white
+				+bor-rad(5px)
+				overflow: hidden
+				+media-breakpoint-down(sm)
+					width: 100%
+				input 
+					width: calc(100% - 90px)
+					line-height: 38px
+					border: none
+					+fs(13rem)
+					padding: 0px 15px
+					color: darken($white,60%)
+				.subscribebutton
+					background: $dyellow
+					color: $white
+					border: none
+					+fs(13rem)
+					width: 90px
+					line-height: 38px
+					text-align: center
+					+bor-rad(5px)
+	.footerbottom
+		background: $white
+		padding: 10px 0
+		.logo
+			float: left
+			+media-breakpoint-down(md)
+				float: none
+				text-align: center
+		.copyright
+			float: left
+			+fs(13rem)
+			margin-left: 20px
+			margin-top: 15px
+			color: darken($white,40%)
+			+media-breakpoint-down(md)
+				float: none
+				text-align: center
+				margin-left: 0

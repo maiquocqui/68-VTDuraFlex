@@ -1,0 +1,57 @@
+.solution-page
+	padding: 40px 0
+	.solution-list
+		.col-custom
+			width: 20%
+			padding: 0px 10px
+			+media-breakpoint-down(lg)
+				width: 25%
+			+media-breakpoint-down(md)
+				width: 33.33%
+			+media-breakpoint-down(sm)
+				width: 50%
+			+media-breakpoint-down(xs)
+				width: 100%
+		.solution-col
+			margin-bottom: 40px
+			figure 
+				.solution-img 
+					width: 150px
+					height: 150px
+					border: 3px solid $green
+					margin: 0 auto 10px
+					+flexbox
+					justify-content: center
+					align-items: center
+					+bor-rad(50%)
+					background: $green
+					+transition(all,0.5s)
+					img 
+						filter: grayscale(100%) brightness(200%)
+						+transition(all,0.5s)
+				figcaption
+					text-align: center
+					.solution-name
+						a 
+							color: darken($white,60%)
+							display: block
+							padding: 5px 0
+							+fs(16rem)
+							&:hover
+								color: $black
+					.link
+						+fs(14rem)
+						color: darken($white,40%)
+						&:hover
+							color: $green
+						&:after
+							content: "\e87a"
+							font-family: 'linearicons-free'
+							margin-left: 5px
+				&:hover
+					.solution-img
+						+transform(scale(-1,1))
+						background: $white
+						img 
+							+transform(scale(-1,1))
+							filter: grayscale(0%) brightness(100%)

@@ -1,0 +1,66 @@
+.booking-page
+	padding: 50px 0
+	.booking-form
+		.form-group
+			+flexbox
+			flex-wrap: wrap
+			padding: 0px 10px
+			border-bottom: 1px solid darken($white,10%)
+			margin-bottom: 0
+			background: darken($white,4%)
+			+media-breakpoint-down(sm)
+				padding: 10px 0
+			label 
+				+flexbox
+				align-content: center
+				align-items: center
+				+fs(14rem)
+				color: darken($white,60%)
+				border-right: 1px solid darken($white,10%)
+				padding: 0px 15px
+				width: 260px
+				+media-breakpoint-down(sm)
+					width: 100%
+					border-right: none
+					margin-bottom: 5px
+			.input
+				width: calc(100% - 260px)
+				padding: 6px 15px
+				+flexbox
+				+media-breakpoint-down(sm)
+					width: 100%
+				input, select 
+					+bor-rad(5px)
+					background: $white
+					border: none
+					+fs(14rme)
+					padding: 10px 15px
+					width: 100%
+				&.gender
+					select 
+						width: 100px
+						margin-right: 5px
+					input
+						width: calc(100% - 100px)
+				&.select
+					select  
+						width: 60%
+						+media-breakpoint-down(sm)
+							width: 100%
+				&.date
+					input  
+						width: 60%
+						+media-breakpoint-down(sm)
+							width: 100%
+		.frm-btn
+			text-align: center
+			padding: 30px 0
+		input[type='submit']
+			background: $yellow
+			color: $main
+			text-transform: uppercase
+			line-height: 40px
+			padding: 0px 25px
+			+bor-rad(5px)
+			display: inline-block
+			border: none
